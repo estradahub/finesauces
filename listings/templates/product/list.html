@@ -19,16 +19,16 @@
                     class="btn btn-block text-left">All</a>
                 </li>
                 {% for category in categories %}
-                    <li {% if category.slug == requested_category.slug %}
+                <li {% if category.slug == requested_category.slug %}
                     class = "list-group-item border-0 p-0 selected"
                     {% else %}
                     class="list-group-item border-0 p-0 unselected">
                     {% endif %}
-                        <a href="{{ category.get_absoulte_url }}"
-                         class="btn btn-block text-left">
-                            {{ category.name }}
-                        </a>
-                    </li>
+                    <a href="{{ category.get_absoulte_url }}"
+                        class="btn btn-block text-left">
+                        {{ category.name }}
+                    </a>
+                </li>
                 {% endfor %}
             </ul>
         </div>
